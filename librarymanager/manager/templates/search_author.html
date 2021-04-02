@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3> Search Results by Author</h3>
+<table class="table table-striped">
+<tr>
+<th>Title</th>
+<th>Author</th>
+<th>Category</th>
+<th>Available copies</th>
+</tr>
+{% for book in books %}
+<tr>
+<td><a href="{% url 'view_book' book.pk %}">{{book.title}}</a></td>
+<td>{{book.author}}</td>
+<td>{{book.category}}</td>
+<td>{{book.in_stock}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

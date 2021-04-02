@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Update details about {{book.title}}</h3>
+<div class="content-section">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'list_books' %}">Update</a>
+        </form>
+    </div>
+{% endblock %}

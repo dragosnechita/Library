@@ -1,0 +1,20 @@
+Test Samsa Software
+
+Administrarea unei biblioteci
+
+autentificare in aplicatie - doua tipuri de utilizatori( administrator si student)
+
+Administratorul poate doar sa adauge carti si categorii:
+Cartile au: - autor, titlul, categorie, stoc(cate exemplare sunt intr-o biblioteca)
+O carte poate face parte dintr-o singura categorie, dar mai multe carti pot face parte din aceasi categorie
+
+Administratorul poate adauga/edita/sterge carti, dar si posibilitatea sa caute dupa autor sau titlul.
+
+Studentii:
+
+Se pot autentifica in aplicatie.
+
+Poate vedea lista de carti, cauta prin lista dupa autor si titlul.
+Poate imprumuta carti.
+O pagina cu cartile imprumutate.
+In lista de carti nu pot aparea cartile care au fost imprumutate

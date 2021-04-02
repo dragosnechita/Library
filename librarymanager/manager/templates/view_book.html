@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3> Book details <h3>
+<h5>Title: {{ book.title }}</h5>
+<h5>Author: {{ book.author }}</h5>
+<h5>Category: {{ book.category }}</h5>
+
+
+<div class="container-fluid" id="buttons">
+{% if user.is_authenticated and user.is_librarian %}
+<div>
+    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'edit_book' object.pk %}">Update</a>
+    <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'delete_book' object.pk %}">Delete</a>
+</div>
+{% elif user.is_authenticated and user.is_student %}
+<form action="#">
+    <input class="btn btn-primary" type="submit" value="Loan Book"/>
+</form>
+
+</div>
+
+
+{% endif %}
+
+{% endblock %}

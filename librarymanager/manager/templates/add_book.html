@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Add a Book</h3>
+<div class="content-section">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Add a book</legend>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Add Book</button>
+            </div>
+        </form>
+</div>
+{% endblock %}

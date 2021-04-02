@@ -1,0 +1,39 @@
+.sidebar-nav {
+    background: darkgreen;
+    border-radius: 5px;
+    padding: 15px 15px;
+}
+
+.sidebar-nav li {
+    list-style-type: none;
+ 
+}
+
+.sidebar-nav a {
+    color:white;
+}
+
+.container-fluid {
+    padding-top: 5%;
+    margin: 5px;
+}
+
+#user_greeting {
+    margin: 5px 0px;
+    padding: 5%;
+}
+
+.col-sm-3 {
+    background-color: mediumaquamarine;
+    border-radius: 5%;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.searchbar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
