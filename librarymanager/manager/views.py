@@ -28,6 +28,7 @@ class SignUp(TemplateView):
 
 class AddLibrarian(CreateView):
     model = User
+    fields = '__all__'
     form_class = AddLibrarian
     template_name = 'add_librarian.html'
 
@@ -60,7 +61,7 @@ class AddStudent(CreateView):
 class AddBook(CreateView):
     model = Book
     template_name = 'add_book.html'
-    fields = '__all__'
+    fields = ['title', 'author', 'category']
     success_url = reverse_lazy('add_book')
 
 @method_decorator([login_required, librarian_required], name='dispatch')
@@ -80,7 +81,7 @@ class ViewBook(DetailView):
 class EditBook(UpdateView):
     model = Book
     template_name = 'edit_book.html'
-    fields = '__all__'
+    fields = ['title', 'author', 'category']
 
 @method_decorator([login_required, librarian_required], name='dispatch')
 class DeleteBook(DeleteView):
